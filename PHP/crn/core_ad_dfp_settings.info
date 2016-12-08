@@ -1,0 +1,13 @@
+name = Core Ad Dfp Settings
+description = DFP customization for crain
+core = 7.x
+package = Advertising
+
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = dfp
+
+;
+core = "7.x"
+project = "core_ad_dfp_settings"

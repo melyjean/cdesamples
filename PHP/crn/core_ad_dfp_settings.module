@@ -1,0 +1,360 @@
+<?php
+
+/**
+ * @file
+ * Module file for the Crain DFP module which allows you to set
+ * your ad path and ad section directly from Panels configuration.
+ */
+
+/**
+ * Implements hook_page_manager_variant_operations_alter().
+ *
+ */
+
+function core_ad_dfp_settings_page_manager_variant_operations_alter(&$operations, $handler) {
+
+  reset($operations['children']);
+  $children_operations = array();
+  while (list($key, $value) = each($operations['children'])) {
+    $children_operations[$key] = $value;
+    if ($key == 'context') {
+      $children_operations['core_ad_dfp_settings'] = array(
+        'title' => t('Crain DFP'),
+        'description' => t('Edit Crain DFP'),
+        'form' => 'core_ad_dfp_settings_variant_form',
+      );
+    }
+  }
+  $operations['children'] = $children_operations;
+}
+
+/**
+ * core_ad_dfp_settings title form.
+ */
+function core_ad_dfp_settings_variant_form($form, &$form_state) {
+
+  //ctools_include('context-task-handler');
+
+  $handler = &$form_state['handler'];
+  //$contexts = ctools_context_handler_get_all_contexts($form_state['task'], $form_state['subtask'], $handler);
+
+  if (empty($handler->conf['core_ad_dfp_settings_state'])) {
+    $handler->conf['core_ad_dfp_settings_state'] = '0';
+  }
+
+  if (empty($handler->conf['core_ad_dfp_settings_adpath'])) {
+    $handler->conf['core_ad_dfp_settings_adpath'] = '';
+  }
+
+  if (empty($handler->conf['core_ad_dfp_settings_section'])) {
+    $handler->conf['core_ad_dfp_settings_section'] = '';
+  }
+
+  if (empty($handler->conf['core_ad_dfp_settings_tags'])) {
+    $handler->conf['core_ad_dfp_settings_tags'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_state'])) {
+    $handler->conf['view_ad_state'] = '0';
+  }
+
+  if (empty($handler->conf['view_ad_position']['pos0'])) {
+    $handler->conf['view_ad_position']['pos0'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_position']['pos1'])) {
+    $handler->conf['view_ad_position']['pos1'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_position']['pos2'])) {
+    $handler->conf['view_ad_position']['pos2'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_position']['ad0'])) {
+    $handler->conf['view_ad_position']['ad0'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_position']['ad1'])) {
+    $handler->conf['view_ad_position']['ad1'] = '';
+  }
+
+  if (empty($handler->conf['view_ad_position']['ad2'])) {
+    $handler->conf['view_ad_position']['ad2'] = '';
+  }
+
+  $form['settings']['core_ad_dfp_settings_state'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Crain DFP set for this Variant'),
+    '#default_value' => $handler->conf['core_ad_dfp_settings_state'],
+  );
+
+  $form['settings']['core_ad_dfp_settings_adpath'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Ad Path'),
+    '#default_value' => $handler->conf['core_ad_dfp_settings_adpath'],
+    '#maxlength' => 2000,
+  );
+
+
+  $form['settings']['core_ad_dfp_settings_section'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Section'),
+    '#description' => t('Section for DFP'),
+    '#default_value' => $handler->conf['core_ad_dfp_settings_section'],
+  );
+
+  $form['settings']['core_ad_dfp_settings_tags'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Tags'),
+    '#description' => t('Tags for DFP'),
+    '#default_value' => $handler->conf['core_ad_dfp_settings_tags'],
+  );
+
+  $form['settings']['view_ad_state'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Ad insertion in to View'),
+    '#default_value' => $handler->conf['view_ad_state'],
+  );
+
+  $tags = dfp_tag_load_all();
+
+  $tag_options = array('' => 'please select');
+  $tag_pos_options = array('' => 'please select');
+  foreach ($tags as $tag) {
+    $tag_options[$tag->machinename] = $tag->slot;
+  }
+  for ($i = 1; $i <= 10; $i++) {
+    $tag_pos_options[$i] = $i;
+  }
+
+  $form['settings']['view_ad_position'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Ad Postions for Views'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#states' => array(
+      'visible' => array(
+        ':input[name="view_ad_state"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+
+  $form['settings']['view_ad_position']['pos0'] = array(
+    '#type' => 'select',
+    '#options' => $tag_pos_options,
+    '#default_value' => $handler->conf['view_ad_position']['pos0'],
+    '#title' => t('Choose the ad position.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="view_ad_state"]' => array('checked' => TRUE),
+      ),
+      'required' => array(
+        ':input[name="view_ad_state"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+  $form['settings']['view_ad_position']['ad0'] = array(
+    '#type' => 'select',
+    '#options' => $tag_options,
+    '#default_value' => $handler->conf['view_ad_position']['ad0'],
+    '#title' => t('Choose the ad slots to show in location.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="view_ad_state"]' => array('checked' => TRUE),
+      ),
+      'required' => array(
+        ':input[name="view_ad_state"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+  $form['settings']['view_ad_position']['pos1'] = array(
+    '#type' => 'select',
+    '#options' => $tag_pos_options,
+    '#default_value' => $handler->conf['view_ad_position']['pos1'],
+    '#title' => t('Choose the ad position.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="ad0"]' => array('!value' => ''),
+      ),
+      'required' => array(
+        ':input[name="ad1"]' => array('!value' => ''),
+      ),
+    ),
+
+  );
+  $form['settings']['view_ad_position']['ad1'] = array(
+    '#type' => 'select',
+    '#options' => $tag_options,
+    '#default_value' => $handler->conf['view_ad_position']['ad1'],
+    '#title' => t('Choose the ad slots to show in location.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="pos1"]' => array('!value' => ''),
+      ),
+      'required' => array(
+        ':input[name="pos1"]' => array('!value' => ''),
+      ),
+    ),
+  );
+  $form['settings']['view_ad_position']['pos2'] = array(
+      '#type' => 'select',
+      '#options' => $tag_pos_options,
+      '#default_value' => $handler->conf['view_ad_position']['pos2'],
+      '#title' => t('Choose the ad position.'),
+      '#states' => array(
+        'visible' => array(
+          ':input[name="ad1"]' => array('!value' => ''),
+        ),
+        'required' => array(
+          ':input[name="ad2"]' => array('!value' => ''),
+        ),
+      ),
+    );
+    $form['settings']['view_ad_position']['ad2'] = array(
+      '#type' => 'select',
+      '#options' => $tag_options,
+      '#default_value' => $handler->conf['view_ad_position']['ad2'],
+      '#title' => t('Choose the ad slots to show in location.'),
+      '#states' => array(
+        'visible' => array(
+          ':input[name="pos2"]' => array('!value' => ''),
+        ),
+        'required' => array(
+          ':input[name="pos2"]' => array('!value' => ''),
+        ),
+      ),
+    );
+  $rows = array();
+
+  return $form;
+}
+
+
+/**
+ * core_ad_dfp_settings submission.
+ */
+function core_ad_dfp_settings_variant_form_submit($form, &$form_state) {
+  $form_state['handler']->conf['core_ad_dfp_settings_state'] = $form_state['values']['core_ad_dfp_settings_state'];
+  $form_state['handler']->conf['core_ad_dfp_settings_adpath'] = $form_state['values']['core_ad_dfp_settings_adpath'];
+  $form_state['handler']->conf['core_ad_dfp_settings_tags'] = $form_state['values']['core_ad_dfp_settings_tags'];
+  $form_state['handler']->conf['core_ad_dfp_settings_section'] = $form_state['values']['core_ad_dfp_settings_section'];
+
+  $form_state['handler']->conf['view_ad_state'] = $form_state['values']['view_ad_state'];
+
+  $form_state['handler']->conf['view_ad_position']['pos0'] = $form_state['values']['pos0'];
+  $form_state['handler']->conf['view_ad_position']['ad0'] = $form_state['values']['ad0'];
+
+  $form_state['handler']->conf['view_ad_position']['pos1'] = $form_state['values']['pos1'];
+  $form_state['handler']->conf['view_ad_position']['ad1'] = $form_state['values']['ad1'];
+
+  $form_state['handler']->conf['view_ad_position']['pos2'] = $form_state['values']['pos2'];
+  $form_state['handler']->conf['view_ad_position']['ad2'] = $form_state['values']['ad2'];
+
+}
+
+
+/**
+ * Alter the tag object just after it is loaded and the settings have been
+ * loaded properly.
+ *
+ * @param object $tag
+ */
+function core_ad_dfp_settings_dfp_tag_alter(&$tag) {
+   //$targetingsettings = $tag->settings['targeting'];
+    //$theadunit = $tag->adunit;
+
+  $tasks = page_manager_get_current_page();
+  if (isset($tasks['handler']) && !empty($tasks['handler']->conf['core_ad_dfp_settings_state'])) {
+
+    $tag->adunit = $tasks['handler']->conf['core_ad_dfp_settings_adpath'];
+    //if (isset($tasks['handler']->conf['display']->context)) {
+      //$display_context = $tasks['handler']->conf['display']->context;
+    //}
+    //elseif (isset($tasks['contexts'])) {
+      //$display_context = $tasks['contexts'];
+    //}
+
+  }
+
+}
+
+/**
+ * Alter a targeting key|value pair.
+ *
+ * @param array $target
+ */
+function core_ad_dfp_settings_dfp_target_alter(&$target) {
+
+  $tasks = page_manager_get_current_page();
+  if (isset($tasks['handler']) && !empty($tasks['handler']->conf['core_ad_dfp_settings_state'])) {
+    if (isset($tasks['handler']->conf['core_ad_dfp_settings_section'])) {
+      $thesectionvalue =  $tasks['handler']->conf['core_ad_dfp_settings_section'];
+    }
+    if (isset($tasks['handler']->conf['core_ad_dfp_settings_tags'])) {
+      $thetagvalue =  $tasks['handler']->conf['core_ad_dfp_settings_tags'];
+    } else {
+      $thetagvalue = '';
+    }
+  }
+    foreach ($target as $key => $value) {
+      if (isset($tasks['handler']) && !empty($tasks['handler']->conf['core_ad_dfp_settings_state'])) {
+        if (($key == 'target') && ($value == '"section"') && isset($thesectionvalue)) {
+         $target['value'] = $thesectionvalue;
+       }
+       if (($key == 'target') && ($value == '"tags"') && isset($thetagvalue)) {
+        $target['value'] = $thetagvalue;
+       }
+     }
+     $target['value'] = strip_tags($target['value']);
+      if (($key == 'target') && (($value == '"section"') || ($value == '"author"') || ($value == '"tags"'))) {
+          $target['value'] = str_replace(" ", "-",str_replace(", " , ",", strtolower($target['value'])));
+        }
+    }
+}
+
+function core_ad_dfp_settings_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'core_ad_dfp_settings'),
+    'template path' => drupal_get_path('module', 'core_ad_dfp_settings'),
+  );
+}
+
+function core_ad_dfp_settings_theme($existing, $type, $theme, $path) {
+  $themes = array();
+  $themes['views_view_unformatted'] = array(
+    'template' => 'views-view-unformatted',
+    'preprocess functions' => array(
+      'core_ad_dfp_settings_preprocess_views_view_unformatted',
+    ),
+  );
+  return $themes;
+}
+
+function core_ad_dfp_settings_preprocess_views_view_unformatted(&$vars) {
+  $tasks = page_manager_get_current_page();
+  $vars['passit'] = array();
+  $theviewadposition = $tasks['handler']->conf['view_ad_position'];
+  if (isset($tasks['handler']) && !empty($tasks['handler']->conf['core_ad_dfp_settings_state'])) {
+    if (isset($theviewadposition)) {
+      foreach ($theviewadposition as $key => $value) {
+        if (substr($key, 0, 3) == 'pos') {
+          $corresponding_ad = 'ad' . substr($key, 3, 1);
+          if (array_key_exists($corresponding_ad, $theviewadposition)) {
+            if ($value != '') {
+              $tag = dfp_tag_load($tasks['handler']->conf['view_ad_position'][$corresponding_ad]);
+              if (empty($tag->disabled)) {
+                $dfp_tag = dfp_tag($tasks['handler']->conf['view_ad_position'][$corresponding_ad]);
+                if (isset($dfp_tag)) {
+                  $vars['passit'][$value] = render($dfp_tag);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
