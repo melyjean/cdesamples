@@ -1,0 +1,50 @@
+#uline {
+	text-decoration: underline;
+}
+.uline {
+	border-bottom: 1px solid black;
+}
+#ENGs {
+	font-size: xx-small;
+}
+.row {
+	padding: 3px;
+	clear: both;
+	width: 662px;
+}
+
+#wrap {
+	text-align: center;
+	float: left;
+	margin-right: 8px;
+}
+body {
+	font-size: 10pt;
+}
+#screen {
+	display: none;
+}
+#print {
+	display: inline;
+}
+#SIG {
+	text-decoration: overline;
+	border-top-width: 1px;
+	border-top-color: black;
+}
+#tableGrid {
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+#right {
+	float: right;
+}
+#left {
+	float: left;
+}
+#wrapper {
+display: none;
+}
+#pagebreak {
+	page-break-after: always;
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>sunspot.net - bay & beach</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META 
+content="Maryland's leading online source for&#10;features news at the local, state and national levels, with columns from The&#10;Baltimore Sun columnists." 
+name=description>
+<META 
+content="Television, TV, Radio, People, Travel, Family,&#10;Crossword, Horoscope, Food, Baltimore, Maryland, Anne Arundel, Howard, Harford,&#10;State, Local, Community, Sun archives, Baltimore Sun, SunSpot, Regional,&#10;www.baltimoresun.com" 
+name=keywords>
+<META http-equiv=Window-target content=_top>
+<base href="http://www.baltimoresun.com">
+<SCRIPT>
+<!--
+if (top.frames.length!=0)
+     top.location=self.document.location;
+// -->
+</SCRIPT>
+<BASE target=_top><LINK href="/stylesheets/default.css" type=text/css 
+rel=stylesheet>
+<SCRIPT language=javascript>
+<!--
+var onoff=0;
+var donoff=0;
+var nav4=false;
+var nav6=false;
+var ie=false;
+var doc="document"
+var now= new Date();
+y=now.getYear();
+m=now.getMonth();
+m++;
+
+// general browser sniff
+
+if (document.all) {
+  ie=true;
+  doc="document.all";
+}
+else if (document.layers) {
+  nav4=true;
+  
+}
+else if (document.getElementById) {
+  nav6=true;
+}
+
+if (!nav4) {y-=2000} 
+else {y-=100}
+year="0"+y;
+
+function processElements(){
+	//call the individual functions here
+	//only one right now
+	return makeDate();
+}
+
+function makeDate() {
+	startChange=eval(doc+".planner.start_date");
+	startChange.value=getStartDate();
+	endChange=eval(doc+".planner.end_date");
+	endChange.value=getEndDate();
+	return true;
+}
+
+function getStartDate() {
+	var mon=eval(doc+".planner.start_date_month");
+	var day=eval(doc+".planner.start_date_day");
+	if (mon.options[mon.options.selectedIndex].value<m) {
+		ys=y+1;
+		years="0"+ys
+	} else {years=year}
+	return mon.options[mon.options.selectedIndex].value+"/"+day.options[day.options.selectedIndex].value+"/"+years;
+}
+
+function getEndDate() {
+	var mon=eval(doc+".planner.end_date_month");
+	var day=eval(doc+".planner.end_date_day");
+	if (mon.options[mon.options.selectedIndex].value<m) {
+		ye=y+1;
+		yeare="0"+ye
+	} else {yeare=year}
+	return mon.options[mon.options.selectedIndex].value+"/"+day.options[day.options.selectedIndex].value+"/"+yeare;
+	
+}
+
+function selectRestaurants() {
+	var els=eval(doc+".planner");
+	for (i=0;i<els.elements.length;i++) {
+		if (els.elements[i].name=="attribute-Cuisine") {
+			if (!onoff) {els.elements[i].checked=true}
+			else {els.elements[i].checked=false}
+		}
+	}
+	onoff=onoff?0:1;
+}
+
+function selectDestinations() {
+	var els=eval(doc+".planner");
+	for (i=0;i<els.elements.length;i++) {
+		if ((els.elements[i].name=="zap")||(els.elements[i].name=="attribute-Visitors Guide" && (els.elements[i].value=="83"||els.elements[i].value=="489"||els.elements[i].value=="493"||els.elements[i].value=="403"||els.elements[i].value=="89"||els.elements[i].value=="187"||els.elements[i].value=="310"))|| els.elements[i].name=="venues") {
+			if (!donoff) {els.elements[i].checked=true}
+			else {els.elements[i].checked=false}
+		}
+	}
+	donoff=donoff?0:1;
+}
+
+function checkInit() {
+	
+	if (eval(doc+".planner.alldest.checked")) {donoff=1}
+	if (eval(doc+".planner.allrest.checked")) {onoff=1}
+		
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#336633 link=#003366 bgColor=#ffffff leftMargin=25 
+background=http://www.sunspot.net/images/background.gif onload=checkInit() 
+marginheight="5" marginwidth="25"><!-- BEGIN SEARCH INDEX, ABOUT US--><IMG 
+height=9 src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/search/">Search/Archive</A></FONT></B> &nbsp; <IMG height=9 
+src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/about/bal-sitemap.htmlstory">Site Map</A></FONT></B> &nbsp; <IMG height=9 
+src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/about/">About Us</A></FONT></B> &nbsp; <IMG height=9 
+src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/about/bal-feedback.htmlstory">Contact Us</A></FONT></B> &nbsp; <IMG 
+height=9 src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/about/bal-circulation.htmlstory">Home Delivery</A></FONT></B> &nbsp; <IMG 
+height=9 src="/images/standard/greenarrow.gif" width=6 border=0> <B><FONT 
+face=verdana,helvetica,arial color=#336633 size=1><A class=green 
+href="/about/bal-about-sunspot-advertising.htmlstory">Advertise</A></FONT></B><!-- END SEARCHINDEX, ABOUT US--> 
+<BR><IMG height=5 src="/images/clear.gif" width=1 border=0><BR>
+<TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=152><A href="/"><IMG height=65 
+      src="/images/standard/sunspothomenew.gif" width=152 border=0></A></TD>
+    <TD width=120><IMG height=65 src="/images/sectionhead/bayandbeach.gif" 
+      width=120 border=0></TD>
+    <TD width=20><IMG height=1 src="/images/clear.gif" width=20 border=0></TD>
+    <TD width=468>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=468x60&adplacement=top&adtype=banner&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=468x60&adplacement=top&adtype=banner&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+    </TD></TR>
+  <TR>
+    <TD colSpan=4><!-- image map --><MAP name=nav><AREA shape=RECT 
+        coords=115,-2,242,19 href="/business"><AREA shape=RECT 
+        coords=225,-2,352,19 href="/sports"><AREA shape=RECT 
+        coords=595,-2,722,19 href="/marketplace"><AREA shape=RECT 
+        coords=462,-2,589,19 href="/news/opinion"><AREA shape=RECT 
+        coords=342,-2,469,19 href="/features"><AREA shape=RECT 
+        coords=7,-2,134,19 href="http://www.sunspot.net"></MAP><IMG height=25 
+      src="/images/standard/navartslife.gif" width=760 useMap=#nav 
+  border=0></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=140>
+      <TABLE cellSpacing=0 cellPadding=0 width=140 border=0>
+        <TBODY>
+        <TR>
+          <TD colSpan=3><IMG height=4 src="/images/standard/yellowtop_140.gif" 
+            width=140 border=0></TD></TR>
+        <TR bgColor=beige>
+          <TD width=10><IMG height=1 src="/images/clear.gif" width=10></TD>
+          <TD width=123><B><IMG height=9 alt=* 
+            src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+            class=green href="/"><FONT face=verdana,helvetica,arial 
+            color=#003366 size=1>News</FONT></A></B><BR><B><IMG height=9 alt=* 
+            src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+            class=green href="/business"><FONT face=verdana,helvetica,arial 
+            color=#003366 size=1>Business</FONT></A></B><BR><B><IMG height=9 
+            alt=* src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+            class=green href="/sports/"><FONT face=verdana,helvetica,arial 
+            color=#003366 size=1>Sports</FONT></A></B><BR><B><IMG height=6 alt=* 
+            src="/images/standard/redarrow.gif" width=9 border=0> <A class=blue 
+            href="/features/"><FONT face=verdana,helvetica,arial color=#003366 
+            size=1>Arts/Life</FONT></A></B><BR><FONT face=helvetica,arial 
+            size=1>&nbsp; &nbsp; <A class=blueplain 
+            href="/features/lifestyle/">Today</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain href="/features/arts/">Arts/Society</A><BR>&nbsp; 
+            &nbsp; <A class=blueplain 
+            href="/features/home/">Home/Family</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain href="/travel">Travel</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain 
+            href="/entertainment/movies/">Movies/Video</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain 
+            href="/entertainment/music/">Music/Nightlife</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain 
+            href="/entertainment/dining/">Restaurants/Food</A><BR>&nbsp; &nbsp; 
+            <A class=blueplain 
+            href="/entertainment/galleriesmuseums/">Art/Museums</A><BR>&nbsp; 
+            &nbsp; <A class=blueplain 
+            href="/entertainment/stage/">Theater/Dance</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain href="/features/books/">Books</A><BR>&nbsp; &nbsp; 
+            <A class=blueplain href="/entertainment/visitor/">Visitors' 
+            Guide</A><BR>&nbsp; &nbsp; <A class=blueplain 
+            href="/entertainment/tv/">TV/Media</A><BR>&nbsp; &nbsp; <A 
+            class=blueplain 
+            href="http://www2.uclick.com/client/bal/cx/">Crossword</A><BR>&nbsp; 
+            &nbsp; <A class=blueplain 
+            href="http://www2.uclick.com/client/bal/el/">Horoscope</A><BR></FONT><B><IMG 
+            height=9 alt=* src="/images/standard/greenarrow.gif" width=6 
+            border=0> <A class=green href="/news/opinion/"><FONT 
+            face=verdana,helvetica,arial color=#003366 
+            size=1>Opinion</FONT></A></B><BR><B><IMG height=9 alt=* 
+            src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+            class=green href="/marketplace/"><FONT face=verdana,helvetica,arial 
+            color=#003366 size=1>Marketplace</FONT></A></B><BR></TD>
+          <TD width=7><IMG height=1 src="/images/clear.gif" width=7></TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=4 
+            src="/images/standard/yellowbottom_140.gif" width=140 
+        border=0></TD></TR></TBODY></TABLE>
+      <P><IMG height=14 alt="Other services" 
+      src="/images/standard/otherservices.gif" width=140 border=0><BR><B><FONT 
+      face=verdana,helvetica,arial color=#336633 size=1><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/news/printedition/">Print Edition</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/wireless/">Wireless Edition</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/news/corrections/">Corrections</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/shopping/store/">SunSource Store</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/search/">Search/Archive</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/about/bal-sitemap.htmlstory">Site Map</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/about/">About Us</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/about/bal-feedback.htmlstory">Contact Us</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/about/bal-circulation.htmlstory">Home Delivery</A><BR><IMG height=9 
+      alt=* src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+      class=green 
+      href="/about/bal-about-sunspot-advertising.htmlstory">Advertise</A><BR><IMG 
+      height=9 alt=* src="/images/standard/greenarrow.gif" width=6 border=0> <A 
+      class=green href="/go/mapping">Map/directions</A><BR><IMG height=9 alt=* 
+      src="/images/standard/greenarrow.gif" width=6 border=0> <A class=green 
+      href="/about/bal-about-sun-faq.htmlstory">FAQs</A><BR></FONT></B></P></TD>
+    <TD width=15><IMG height=1 src="/images/clear.gif" width=15></TD>
+    <TD vAlign=top width=465><!-- BEGIN MAIN AREA CONTENT--><FONT 
+      size=+2>Interactive Trip Planner</FONT><BR>Choose a destination, dates of 
+      travel and areas of interest, and this planner provides you with a 
+      printable, proposed plan of attack for your vacation.
+      <HR>
+       
+      <FORM name=planner onsubmit=processElements() 
+      action=http://www.sunspot.net/cgi-bin/bay/planner.pl method=get>
+      <TABLE cellSpacing=0 cellPadding=1 width=450 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left><FONT 
+            face=verdana,helvetica,arial><STRONG>Where are you 
+            going?</STRONG><BR><SELECT multiple size=5 name=community> <OPTION 
+              value=44>Ocean City Area</OPTION> 
+              <OPTION value=118>Atlantic City, N.J.</OPTION>
+              <OPTION value=114>Bethany, 
+              Del.</OPTION> <OPTION value=112>Cape May, N.J.</OPTION> <OPTION 
+              value=115>Dewey Beach, Del.</OPTION> <OPTION value="9">Easton</OPTION>
+              <OPTION value=117>Fenwick 
+              Island</OPTION> <OPTION value=116>Lewes, Del.</OPTION> 
+              <OPTION value=122>Outer Banks, N.C.</OPTION><OPTION 
+              value=113>Rehoboth Beach, Del.</OPTION> <OPTION value=46>St. 
+              Michael's</OPTION>
+              <OPTION value=121>The Wildwoods, N.J.</OPTION>
+              </SELECT><BR><FONT 
+            face=verdana,helvetica,arial color=#666666 size=-2>Use the Ctrl key 
+            (Windows) or the Command key (Mac) to make multiple 
+            selections</FONT> </FONT>
+            <P>&nbsp;</P></TD></TR>
+        <TR>
+          <TD vAlign=top align=left><FONT 
+            face=verdana,helvetica,arial><STRONG>When is your 
+            trip?</STRONG></FONT> <FONT face=verdana,helvetica,arial 
+            size=-1><BR><INPUT type=checkbox value=1 name=allDates> select all 
+            dates <B><U>or</U></B>
+            <P></FONT><FONT face=helvetica,arial size=2>Depart: <SELECT 
+            name=start_date_month> <OPTION value=01>January</OPTION> <OPTION 
+              value=02>February</OPTION> <OPTION value=03>March</OPTION> <OPTION 
+              value=04>April</OPTION> <OPTION value=05 selected>May</OPTION> 
+              <OPTION value=06>June</OPTION> <OPTION value=07>July</OPTION> 
+              <OPTION value=08>August</OPTION> <OPTION 
+              value=09>September</OPTION> <OPTION value=10>October</OPTION> 
+              <OPTION value=11>November</OPTION> <OPTION 
+              value=12>December</OPTION></SELECT> <SELECT name=start_date_day> 
+              <OPTION value=01 selected>1</OPTION> <OPTION value=02>2</OPTION> 
+              <OPTION value=03>3</OPTION> <OPTION value=04>4</OPTION> <OPTION 
+              value=05>5</OPTION> <OPTION value=06>6</OPTION> <OPTION 
+              value=07>7</OPTION> <OPTION value=08>8</OPTION> <OPTION 
+              value=09>9</OPTION> <OPTION value=10>10</OPTION> <OPTION 
+              value=11>11</OPTION> <OPTION value=12>12</OPTION> <OPTION 
+              value=13>13</OPTION> <OPTION value=14>14</OPTION> <OPTION 
+              value=15>15</OPTION> <OPTION value=16>16</OPTION> <OPTION 
+              value=17>17</OPTION> <OPTION value=18>18</OPTION> <OPTION 
+              value=19>19</OPTION> <OPTION value=20>20</OPTION> <OPTION 
+              value=21>21</OPTION> <OPTION value=22>22</OPTION> <OPTION 
+              value=23>23</OPTION> <OPTION value=24>24</OPTION> <OPTION 
+              value=25>25</OPTION> <OPTION value=26>26</OPTION> <OPTION 
+              value=27>27</OPTION> <OPTION value=28>28</OPTION> <OPTION 
+              value=29>29</OPTION> <OPTION value=30>30</OPTION> <OPTION 
+              value=31>31</OPTION></SELECT> </FONT></P><FONT face=helvetica,arial 
+            size=2>
+            <P>Return: <SELECT name=end_date_month> <OPTION 
+              value=01>January</OPTION> <OPTION value=02>February</OPTION> 
+              <OPTION value=03>March</OPTION> <OPTION value=05 
+              selected>May</OPTION> <OPTION value=06>June</OPTION> <OPTION 
+              value=07>July</OPTION> <OPTION value=08>August</OPTION> <OPTION 
+              value=09>September</OPTION> <OPTION value=10>October</OPTION> 
+              <OPTION value=11>November</OPTION> <OPTION 
+              value=12>December</OPTION></SELECT> <SELECT name=end_date_day> 
+              <OPTION value=01 selected>1</OPTION> <OPTION value=02>2</OPTION> 
+              <OPTION value=03>3</OPTION> <OPTION value=04>4</OPTION> <OPTION 
+              value=05>5</OPTION> <OPTION value=06>6</OPTION> <OPTION 
+              value=07>7</OPTION> <OPTION value=08>8</OPTION> <OPTION 
+              value=09>9</OPTION> <OPTION value=10>10</OPTION> <OPTION 
+              value=11>11</OPTION> <OPTION value=12>12</OPTION> <OPTION 
+              value=13>13</OPTION> <OPTION value=14>14</OPTION> <OPTION 
+              value=15>15</OPTION> <OPTION value=16>16</OPTION> <OPTION 
+              value=17>17</OPTION> <OPTION value=18>18</OPTION> <OPTION 
+              value=19>19</OPTION> <OPTION value=20>20</OPTION> <OPTION 
+              value=21>21</OPTION> <OPTION value=22>22</OPTION> <OPTION 
+              value=23>23</OPTION> <OPTION value=24>24</OPTION> <OPTION 
+              value=25>25</OPTION> <OPTION value=26>26</OPTION> <OPTION 
+              value=27>27</OPTION> <OPTION value=28>28</OPTION> <OPTION 
+              value=29>29</OPTION> <OPTION value=30>30</OPTION> <OPTION 
+              value=31>31</OPTION></SELECT> </FONT>
+            <HR>
+          </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><FONT 
+            face=verdana,helvetica,arial><B>Events</B></FONT> <BR><FONT 
+            face=helvetica,arial size=2><STRONG>Pick one or more 
+            categories:</STRONG></FONT> <BR><FONT face=helvetica,arial 
+            size=2><INPUT type=checkbox value=Art name=category2> Art<BR><INPUT 
+            type=checkbox value=Books name=category2> Books<BR><INPUT 
+            type=checkbox value=Community name=category2> Community<BR><INPUT 
+            type=checkbox value=Dance name=category2> Dance<BR><INPUT 
+            type=checkbox value=Festivals name=category2> Festivals &amp; 
+            Parades<BR><INPUT type=checkbox value=Food name=category2> 
+            Food<BR><INPUT type=checkbox value=Music name=category2> 
+            Music<BR><INPUT type=checkbox value=Nightlife name=category2> 
+            Nightlife<BR><INPUT type=checkbox value=Visitors_Guide_Sports 
+            name=category2> Sports &amp; Recreation<BR><INPUT type=checkbox 
+            value=Theater name=category2> Theater </FONT>
+            <P></P></TD></TR>
+        <TR>
+          <TD vAlign=top align=left><BR><FONT face=helvetica,arial 
+            size=2><STRONG>Special criteria:</STRONG></FONT> <BR><FONT 
+            face=helvetica,arial size=2><INPUT type=checkbox value=Free 
+            name=affinity> Free<BR><INPUT type=checkbox value=Kids 
+            name=affinity> Kids<BR><INPUT type=checkbox value=Family 
+            name=affinity> Family<BR><INPUT type=checkbox value=Best_Bets 
+            name=affinity> Best Bets<BR><INPUT type=checkbox value=Live_Music 
+            name=affinity> Live Music<BR><INPUT type=checkbox 
+            value=Gay_&amp;_Lesbian name=affinity> Gay &amp; Lesbian<BR><INPUT 
+            type=checkbox value=Local_Artists name=affinity> Local 
+            Artists<BR><INPUT type=checkbox value=Ongoing_exhibits 
+            name=affinity> Ongoing exhibits<BR><INPUT type=checkbox 
+            value=Receptions/Openings name=affinity> Receptions/Openings</FONT> 
+            <INPUT type=hidden value="Specify dates below" name=date> <INPUT 
+            type=hidden name=start_date> <INPUT type=hidden name=end_date> 
+            <HR>
+          </TD></TR>
+        <TR>
+          <TD vAlign=top align=left><STRONG><FONT 
+            face=verdana,helvetica,arial><B>Places to Stay</B></FONT></STRONG> 
+            <BR><FONT face=helvetica,arial size=2><INPUT type=checkbox value=370 
+            name="attribute-Visitors Guide"> Hotels<BR><INPUT type=checkbox 
+            value=121 name="attribute-Visitors Guide"> Bed &amp; 
+            Breakfasts<BR><INPUT type=checkbox value=111 
+            name="attribute-Visitors Guide"> Campgrounds<BR>
+            <HR>
+            </FONT></TD></TR>
+        <TR>
+          <TD vAlign=top align=left><STRONG><FONT 
+            face=verdana,helvetica,arial><B>Destinations 
+            </B></FONT></STRONG><BR><FONT face=helvetica,arial size=2><B>[select 
+            all <INPUT onclick=selectDestinations() type=checkbox 
+            name=alldest>]</B><BR><INPUT type=checkbox value=Art name=venues>Art 
+            &amp; Museums<BR><INPUT type=checkbox value=Dance 
+            name=venues>Dance<BR><INPUT type=checkbox value=Leisure 
+            name=venues>Leisure &amp; Fitness<BR><INPUT type=checkbox 
+            value=Movies name=zap>Movies<BR><INPUT type=checkbox value=Music 
+            name=venues>Music<BR><INPUT type=checkbox value=Theater 
+            name=venues>Theater<BR><INPUT type=checkbox value=Nightlife 
+            name=venues>Nightlife<BR><INPUT type=checkbox value=83 
+            name="attribute-Visitors Guide">Amusement Parks<BR><INPUT 
+            type=checkbox value=489 name="attribute-Visitors Guide">Boat 
+            Rentals<BR><INPUT type=checkbox value=403 
+            name="attribute-Visitors Guide">Gardens &amp; Parks<BR><INPUT 
+            type=checkbox value=89 
+            name="attribute-Visitors Guide">Lectures/Workshops<BR><INPUT 
+            type=checkbox value=493 name="attribute-Visitors Guide">Marinas<BR><INPUT 
+            type=checkbox value=187 name="attribute-Visitors Guide">State 
+            Cycling Trails<BR><INPUT type=checkbox value=310 
+            name="attribute-Visitors Guide">Conventions/Expos<BR>
+            <HR>
+            </FONT></TD></TR>
+        <TR>
+          <TD vAlign=top align=left><FONT 
+            face=verdana,helvetica,arial><B>Restaurants</B></FONT><BR><FONT 
+            face=helvetica,arial size=2><STRONG>By Cuisine: [select all <INPUT 
+            onclick=selectRestaurants() type=checkbox 
+            name=allrest>]</STRONG></FONT> 
+            <TABLE cellSpacing=0 cellPadding=2 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top><FONT face=helvetica,arial size=2><INPUT 
+                  type=checkbox value=99 
+                  name=attribute-Cuisine>Afghani<BR><INPUT type=checkbox 
+                  value=177 name=attribute-Cuisine>American<BR><INPUT 
+                  type=checkbox value=292 
+                  name=attribute-Cuisine>Barbecue/Ribs<BR><INPUT type=checkbox 
+                  value=134 name=attribute-Cuisine>Beef<BR><INPUT type=checkbox 
+                  value=428 name=attribute-Cuisine>Cajun/Creole<BR><INPUT 
+                  type=checkbox value=326 
+                  name=attribute-Cuisine>Chinese<BR><INPUT type=checkbox 
+                  value=46 name=attribute-Cuisine>Continental<BR><INPUT 
+                  type=checkbox value=416 name=attribute-Cuisine>Crab 
+                  House<BR><INPUT type=checkbox value=235 
+                  name=attribute-Cuisine>Eclectic<BR><INPUT type=checkbox 
+                  value=20 name=attribute-Cuisine>Ethiopian<BR><INPUT 
+                  type=checkbox value=153 
+                  name=attribute-Cuisine>French<BR><INPUT type=checkbox value=78 
+                  name=attribute-Cuisine>German<BR><INPUT type=checkbox 
+                  value=359 name=attribute-Cuisine>Greek<BR><INPUT type=checkbox 
+                  value=275 name=attribute-Cuisine>Ice Cream/Frozen 
+                  Yogurt<BR><INPUT type=checkbox value=73 
+                  name=attribute-Cuisine>Indian<BR><INPUT type=checkbox value=67 
+                  name=attribute-Cuisine>Italian<BR><INPUT type=checkbox 
+                  value=446 name=attribute-Cuisine>Japanese<BR></FONT></TD>
+                <TD vAlign=top><FONT face=helvetica,arial size=2><INPUT 
+                  type=checkbox value=266 
+                  name=attribute-Cuisine>Korean<BR><INPUT type=checkbox 
+                  value=182 name=attribute-Cuisine>Kosher<BR><INPUT 
+                  type=checkbox value=30 name=attribute-Cuisine>Mediterranean 
+                  &amp; Middle Eastern<BR><INPUT type=checkbox value=107 
+                  name=attribute-Cuisine>Mexican/Southwestern<BR><INPUT 
+                  type=checkbox value=394 name=attribute-Cuisine>New 
+                  American<BR><INPUT type=checkbox value=431 
+                  name=attribute-Cuisine>Other Ethnic<BR><INPUT type=checkbox 
+                  value=302 name=attribute-Cuisine>Pizzeria<BR><INPUT 
+                  type=checkbox value=215 name=attribute-Cuisine>Regional 
+                  (American)<BR><INPUT type=checkbox value=21 
+                  name=attribute-Cuisine>Seafood<BR><INPUT type=checkbox 
+                  value=395 name=attribute-Cuisine>Soul<BR><INPUT type=checkbox 
+                  value=384 name=attribute-Cuisine>Southern<BR><INPUT 
+                  type=checkbox value=293 
+                  name=attribute-Cuisine>Spanish<BR><INPUT type=checkbox 
+                  value=267 name=attribute-Cuisine>Sushi<BR><INPUT type=checkbox 
+                  value=207 name=attribute-Cuisine>Thai<BR><INPUT type=checkbox 
+                  value=135 name=attribute-Cuisine>Vegetarian/Health 
+                  Food<BR><INPUT type=checkbox value=53 
+                  name=attribute-Cuisine>Vietnamese<BR></FONT></TD></TR></TBODY></TABLE>
+            <P></P></TD></TR><!--
+<tr><td valign=top ><font face=helvetica,arial size=2>
+<font face="helvetica,arial" size=2><strong>Specify Entree Price (select none for all prices): </strong></font>
+<INPUT NAME="attribute-Entree Prices" TYPE=checkbox VALUE=329>Under $5<BR>
+<INPUT NAME="attribute-Entree Prices" TYPE=checkbox VALUE=248>$6 - $11<BR>
+<INPUT NAME="attribute-Entree Prices" TYPE=checkbox VALUE=167>$12 - $18<BR>
+<INPUT NAME="attribute-Entree Prices" TYPE=checkbox VALUE=419>$18 - $24<BR>
+<INPUT NAME="attribute-Entree Prices" TYPE=checkbox VALUE=321>$25 & Up<BR>
+</font>
+</td></tr>
+//-->
+        <TR>
+          <TD vAlign=top align=left>
+            <P>&nbsp;</P><INPUT type=submit value=Search name=submit> <INPUT type=reset value=Reset name=reset> 
+</TD></TR></TBODY></TABLE></FORM><!-- END MAIN AREA CONTENT --></TD>
+    <TD width=9><IMG height=1 src="/images/standard/clear.gif" width=9></TD>
+    <TD width=2 bgColor=#666666><IMG height=1 src="/images/standard/clear.gif" 
+      width=2></TD>
+    <TD width=9><IMG height=1 src="/images/standard/clear.gif" width=9></TD>
+    <TD width=120>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=120 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=1&adtype=rail&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=1&adtype=rail&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+
+      <P>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=120 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=2&adtype=rail&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=2&adtype=rail&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+
+      <P>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=120 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=3&adtype=rail&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=3&adtype=rail&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+
+      <P>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=120 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=4&adtype=rail&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=120xn&adplacement=4&adtype=rail&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+      </P></TD></TR>
+  <TR>
+    <TD colSpan=2></TD>
+    <TD colSpan=5><BR>
+      <HR>
+    </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width=155>&nbsp;</TD>
+    <TD width=605>
+      <DIV align=center>
+      <SCRIPT>
+bust = Math.floor(1000000*Math.random());
+document.write('<IFRAME WIDTH=468 HEIGHT=60 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000" SRC="http://adserver.tribuneinteractive.com/html.ng/site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=468x60&adplacement=bottom&adtype=banner&bust='+bust+'">\n');
+document.write('<SCR' + 'IPT LANGUAGE="JavaScript1.1" SRC="http://adserver.tribuneinteractive.com/js.ng/Params.richmedia=yes&site=sunspot&content=travel&channel=bayandbeach&area=none&tag=net&adsize=468x60&adplacement=bottom&adtype=banner&bust='+bust+'">\n');
+document.write('</SCR' + 'IPT>\n');
+document.write('</IFRAME>');
+</SCRIPT>
+
+      <P><FONT face=helvetica,arial size=-2><A 
+      href="/features/lifestyle/">Today</A> | <A 
+      href="/features/arts/">Arts/Society</A> | <A 
+      href="/features/home/">Home/Family</A> | <A href="/travel">Travel</A> | <A 
+      href="/entertainment/movies/">Movies/Video</A> | <A 
+      href="/entertainment/music/">Music/Nightlife</A> | <A 
+      href="/entertainment/dining/">Restaurants/Food</A> | <A 
+      href="/entertainment/galleriesmuseums/">Art/Museums</A> | <A 
+      href="/entertainment/stage/">Theater/Dance</A> | <A 
+      href="/features/books/">Books</A> | <A 
+      href="/entertainment/visitor/">Visitors' Guide</A> | <A 
+      href="/entertainment/tv/">TV/Media</A></FONT><BR><FONT 
+      face=helvetica,arial size=-2><A href="/">News</A> | <A 
+      href="/business/">Business</A> | <A href="/sports/">Sports</A> | <A 
+      href="/features/">Arts/Life</A> | <A href="/news/opinion/">Opinion</A> | 
+      <A href="/marketplace/">Marketplace</A></FONT> 
+      <P><FONT face=helvetica,arial size=-2><B><A 
+      href="/about/bal-feedback.htmlstory"><FONT face=verdana,helvetica,arial 
+      size=-2>Contact us:</FONT></A></B> Submit feedback, send a letter to the 
+      editor, submit a news tip, get subscription info, or place a classified 
+      ad. </FONT></P><!-----BEGIN COPYRIGHT-----><FONT face=helvetica,arial 
+      size=-2><A href="/about/">SunSpot.net</A> is <A 
+      href="/about/bal-sunspot-agreement.htmlstory">Copyright © </A>2001 by The 
+      <A href="/about/bal-about-sun.htmlstory">Baltimore Sun</A>. <BR>Read the 
+      <A href="/about/bal-sunspot-agreement.htmlstory">SunSpot.net User 
+      Agreement</A> for our policies on copyright, reader privacy and bulletin 
+      boards.
+      <P></P></DIV></FONT></TD></TR></TBODY></TABLE></BODY></HTML>

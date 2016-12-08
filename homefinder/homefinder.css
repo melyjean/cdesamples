@@ -1,0 +1,131 @@
+body {
+text-align: center;
+font:11px arial,sans-serif;
+padding-top:100px;
+/* IE10 */ 
+background-image: -ms-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 143, color-stop(0, #EBF5FA), color-stop(3, #FFFFFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Proposed W3C Markup */ 
+background-image: radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+background-color:#EBF5FA;
+}
+.outterdiv {
+padding-top:100px;
+padding-left:10px;
+margin: 0 auto;
+width:650px;
+text-align: left;
+}
+
+.singleListingRow img {
+margin:0 20px 20px 0;
+float:left;
+}
+
+.singleListingRow {
+width:100%;
+*display:block;
+display:inline-block;
+/* IE10 */ 
+background-image: -ms-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 143, color-stop(0, #EBF5FA), color-stop(3, #FFFFFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+/* Proposed W3C Markup */ 
+background-image: radial-gradient(center, circle closest-side, #EBF5FA 0%, #FFFFFF 300%);
+
+background-color:#EBF5FA;
+margin-bottom:20px;
+}
+
+.floatleft{
+
+width:50%;
+display:inline-block;
+*display:inline;
+}
+
+.floatright{
+
+width:50%;
+display:inline-block;
+*display:inline;
+}
+
+.sml img{
+margin:10px;
+float:none;
+}
+
+.choices li {
+/*  width:25%;  */
+display:inline;
+padding: 5px;
+}
+
+.choices ul {
+list-style-type: none;
+padding: 0px;
+margin: 0px;
+width:100%;
+}
+
+.inr {
+width:20%;
+display:inline-block;
+*display:inline;
+}
+
+.utr {
+width:100%;
+}
+
+input {
+     margin:10px 5px 0 0;
+     }
+input[type=submit]{
+background-color:#ccc;
+font-weight:bold;
+font-family:Arial,Helvetica,sans-serif;
+border:1px solid #000066;
+}
+	.ui-autocomplete {
+		max-height: 100px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;
+		text-align: left;
+	}
+	/* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+	* html .ui-autocomplete {
+		height: 100px;
+	}
+
+	#area { width: 25em; }

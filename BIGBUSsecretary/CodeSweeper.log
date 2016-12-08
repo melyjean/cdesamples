@@ -1,0 +1,48 @@
+Invalid character (<) encountered while parsing (tag "CFSET" with attributes connector=). 
+Invalid character (<) encountered while parsing (tag "CFSET" with attributes connector=</cfif>). 
+Invalid character (<) encountered while parsing (tag "CFSET" with attributes connector= or</cfif>). 
+Invalid quoted string '#form.lname#%' encountered while parsing (tag "CFSET" with attributes criteria=and lname=). 
+Invalid quoted string ' &form.lname#%' encountered while parsing (tag "CFSET" with attributes criteria=and lname=). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes criteria=and lname like  ). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes criteria=and lname like  ). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes criteria=and lname like  ). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes criteria= and lname like  ). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes criteria=criteria). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes stdt=stdt). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes possibleStdLst=possibleStdLst). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes possibleStdLst=possibleStdLst). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes possibleStdLst=possibleStdLst). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes possibleStdLst=possibleStdLst). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes possibleStdLst=possibleStdLst). 
+Invalid quoted string 'form.stdtNo' encountered while parsing (tag "CFIF" with attributes). 
+Invalid quoted string 'form.stdtNo' encountered while parsing (tag "CFIF" with attributes). 
+Invalid quoted string 'form.stdtNo' encountered while parsing (tag "CFIF" with attributes). 
+Invalid quoted string 'form.stdtNo' encountered while parsing (tag "CFIF" with attributes). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid number "3" encountered while parsing (tag "CFIF" with attributes gotNum=). 
+Invalid number "3" encountered while parsing (tag "CFIF" with attributes gotNum=). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes addressList=addressList). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes addressList=addressList). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes addressList=addressList). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes addressList=addressList). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes gotNum=gotNum). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes ky=getrandomAREACODE). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes ky=getrandomAREACODE). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes ky=getrandomAREACODE). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes confirmationQuestionList=confirmationQuestionList). 
+Invalid number "0" encountered while parsing (tag "CFIF" with attributes cfif= GETRANDOMSID.RECORDCOUNT=). 
+Invalid number "0" encountered while parsing (tag "CFIF" with attributes cfif= GETRANDOMSID.RECORDCOUNT=). 
+Invalid character (&) encountered while parsing (tag "CFSET" with attributes sidList=sidList). 
+Invalid character (,) encountered while parsing (tag "CFIF" with attributes not=). 
+Invalid character (,) encountered while parsing (tag "CFIF" with attributes not=). 
+Invalid character (,) encountered while parsing (tag "CFIF" with attributes not=). 
+Invalid character (,) encountered while parsing (tag "CFIF" with attributes not=). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes session.allowedschools=session.allowedschools). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes session.allowedschools=session.allowedschools). 
+Invalid character (+) encountered while parsing (tag "CFSET" with attributes session.allowedschools=session.allowedschools). 
